@@ -106,7 +106,7 @@
             }
         }
     </style>
-    <img src="/_upload/dsc-4049.jpg" alt="Dejw" class="circular-image">
+    <img src="/_upload/dejwjpg.jpg" alt="Dejw" class="circular-image">
     <div class="quote-content">
         <div class="quote-text">
             TODO: Tady bude odstavec od Dejwa na který ještě neexistuje. Zatím jenom AIDewj:
@@ -477,35 +477,104 @@ function copyAccountNumber(element) {
 }
 </script>
 
-<h3>Kontaktujte nás</h3>
-<p>Pro více informací a spolupráci nás kontaktujte:<br>
+<div class="contact-section">
+    <style>
+        .contact-section {
+            margin: 3rem auto;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
 
-</p>
-<h5>CB Brno&nbsp;– Královopolská</h5>
-<ul style="list-style-type: none; padding: 0; margin: 0;">
-    <li>
-        Královopolská 74
-    </li>
-    <li>
-        Brno 616 00
-    </li>
-</ul>
-<ul style="list-style-type: none; padding: 0; margin: 0;">
-    <li>
-        <svg role="img" title="Telefon" style="width: 16px; height: 16px; fill: rgb(0, 51, 131);">
-            <use xlink:href="#icon__phone"></use>
-        </svg>
-        608 11 65 65
-    </li>
-    <li>
-        <svg role="img" title="E-mail" style="width: 16px; height: 16px; fill: rgb(0, 51, 131);">
-            <use xlink:href="#icon__email"></use>
-        </svg>
-        <a href="mailto:david.kubicek@cb.cz" class="inverse">
-            david.kubicek@cb.cz
-        </a>
-    </li>
-</ul>
+        .contact-description {
+            flex: 1;
+            color: #2c3e50;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            flex: 1;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .contact-info h5 {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .contact-info li {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .contact-info svg {
+            width: 16px;
+            height: 16px;
+            fill: #3498db;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: #2980b9;
+        }
+
+        @media screen and (min-width: 768px) {
+            .contact-section {
+                flex-direction: row;
+                align-items: start;
+            }
+
+            .contact-info {
+                min-width: 300px;
+            }
+        }
+    </style>
+    <div class="contact-description">
+        <h3>Kontaktujte nás</h3>
+        <p>Jsme otevřeni i dalším formám spolupráce a rádi s Vámi prodiskutujeme individuální možnosti Vaší podpory. Samozřejmostí je vystavení potvrzení o daru pro daňové účely.</p>
+    </div>
+    <div class="contact-info">
+        <h5>CB Brno – Královopolská</h5>
+        <ul>
+            <li>Královopolská 74</li>
+            <li>Brno 616 00</li>
+        </ul>
+        <ul>
+            <li>
+                <svg role="img" title="Telefon" style="width: 16px; height: 16px;">
+                    <use xlink:href="#icon__phone"></use>
+                </svg>
+                608 11 65 65
+            </li>
+            <li>
+                <svg role="img" title="E-mail" style="width: 16px; height: 16px;">
+                    <use xlink:href="#icon__email"></use>
+                </svg>
+                <a href="mailto:david.kubicek@cb.cz">david.kubicek@cb.cz</a>
+            </li>
+        </ul>
+    </div>
+</div>
 
 <div class="thank-you-section">
     <style>
