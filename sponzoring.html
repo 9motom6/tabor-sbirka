@@ -108,9 +108,12 @@
     <img src="/_upload/dejw-4.jpg" alt="Dejw" class="circular-image">
     <div class="quote-content">
         <div class="quote-text">
-            TODO: Tady bude odstavec od Dejwa. 
-            "Podpořte budoucnost našich skautů! Vaše pomoc nám umožní vytvořit místo, kde se budou děti smát, učit se
-            novým věcem, zažívat dobrodružství a vyrůstat v zodpovědné mladé lidi".
+            <p>Nákupem táborového vybavení chceme především podpořit stabilní prostředí pro vaše/naše děti.
+Letos s námi bylo trochu vymňouknuto, a tak jsme po dlouhé době zakusili, že shánět volné tábořiště s vybavením na poslední chvíli není žádný med.
+Naštěstí vše dobře dopadlo a tábor bude tak, jak jsme zvyklí.</p>
+<p>Rozhodli jsme se ale, že příště chceme mít trumfy ve vlastních rukou a raději nic neriskovat. 
+Vybavení tábořiště nám přinese více klidu a jistoty, a také základ pro další rozvoj našeho vlastního oddílového prostředí. Budeme moc vděční za vaši podporu!</p>
+
         </div>
         <div class="quote-author">
             Dejw Kubíček
@@ -325,8 +328,8 @@
         <ul>
             <li class="total" data-color="#2c3e50" data-hover="#34495e">Celkové náklady<strong>600 000 Kč</strong></li>
             <li class="own-funds" data-color="rgb(54, 162, 235)" data-hover="rgb(41, 128, 185)" data-segment="0,60">Naše vlastní prostředky<strong>100 000 Kč</strong></li>
-            <li class="grant" data-color="rgb(75, 192, 192)" data-hover="rgb(69, 179, 179)" data-segment="60,180">Dotace od Jihomoravského kraje<strong>200 000 Kč</strong></li>
-            <li class="missing" data-color="rgb(255, 99, 132)" data-hover="rgb(231, 76, 106)" data-segment="180,360">Chybějící částka<strong>300 000 Kč</strong></li>
+            <li class="grant" data-color="rgb(75, 192, 192)" data-hover="rgb(69, 179, 179)" data-segment="60,143">Dotace od Jihomoravského kraje<strong>143 000 Kč</strong></li>
+            <li class="missing" data-color="rgb(255, 99, 132)" data-hover="rgb(231, 76, 106)" data-segment="143,360">Chybějící částka<strong>357 000 Kč</strong></li>
         </ul>
     </div>
 
@@ -337,7 +340,6 @@
     </div>
 </div>
 
-<h3>Jak nás můžete podpořit?</h3>
 <div class="support-section">
     <style>
         .support-section {
@@ -483,11 +485,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const grant = document.querySelector('.grant');
         const missing = document.querySelector('.missing');
 
-        const gradient = [
-            `${hoverStart === '0' ? hoverColor : ownFunds.dataset.color} 0deg 60deg`,
-            `${hoverStart === '60' ? hoverColor : grant.dataset.color} 60deg 180deg`,
-            `${hoverStart === '180' ? hoverColor : missing.dataset.color} 180deg 360deg`
-        ].join(',');
+            const gradient = [
+        `${hoverStart === '0' ? hoverColor : ownFunds.dataset.color} 0deg 60deg`,
+        `${hoverStart === '60' ? hoverColor : grant.dataset.color} 60deg 143deg`,
+        `${hoverStart === '143' ? hoverColor : missing.dataset.color} 143deg 360deg`
+    ].join(',');
 
         pieChart.style.background = `conic-gradient(${gradient})`;
     }
