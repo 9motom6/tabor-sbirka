@@ -1,7 +1,7 @@
 <div class="container">
     <p class="intro-text"><strong>Milí přátelé, rádi bychom vás pozvali do společného projektu budování nové táborové základny</strong></p>
     <p class="intro-text">Vybavení bude sloužit našim dětem, mládeži a rodinám ze 42. oddílu Rybka a Hiawatha po mnoho let.</p>
-    <p class="intro-text">Naším cílem je získat moderní a funkční táborové vybavení a to už od příštího roku!</p>
+    <p class="intro-text">Naším cílem je získat moderní a funkční táborové vybavení a to už pro tábor 2026!&nbsp;</p><p class="intro-text"><span style="letter-spacing: 0.14px; background-color: initial;">Nekupujeme žádnou louku, ale vybaveni. Chceme být zatím mobilní a střídat místa tábořišť podle potřeby.&nbsp;</span></p><p class="intro-text"><br></p>
     <div class="testimonial-section">
         <style>
             .testimonial-section {
@@ -778,93 +778,3 @@ Vybavení tábořiště nám přinese více klidu a jistoty, a také základ pro
         }
     }
 </style>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const ctx = document.getElementById('pieChart').getContext('2d');
-    new Chart(ctx, {
-        type: 'pie',
-        data: {
-            labels: ['Naše vlastní prostředky', 'Dotace od Jihomoravského kraje', 'Chybějící částka'],
-            datasets: [{
-                data: [100000, 143000, 357000],
-                backgroundColor: [
-                    'rgb(54, 162, 235)',
-                    'rgb(75, 192, 192)',
-                    'rgb(255, 99, 132)'
-                ],
-                borderWidth: 0
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: {
-                    position: 'bottom',
-                    labels: {
-                        font: {
-                            size: 14
-                        }
-                    }
-                }
-            }
-        }
-    });
-});
-</script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const pieChart = document.getElementById('pieChart');
-        const items = document.querySelectorAll('.financing-details li');
-        
-        // Set initial pie chart colors
-        updatePieChart();
-    
-        items.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                if (item.dataset.hover && item.dataset.segment) {
-                    const [start, end] = item.dataset.segment.split(',');
-                    updatePieChart(item.dataset.hover, start, end);
-                }
-            });
-    
-            item.addEventListener('mouseleave', () => {
-                updatePieChart();
-            });
-        });
-    
-        function updatePieChart(hoverColor = null, hoverStart = null, hoverEnd = null) {
-            const ownFunds = document.querySelector('.own-funds');
-            const grant = document.querySelector('.grant');
-            const missing = document.querySelector('.missing');
-    
-                const gradient = [
-            `${hoverStart === '0' ? hoverColor : ownFunds.dataset.color} 0deg 60deg`,
-            `${hoverStart === '60' ? hoverColor : grant.dataset.color} 60deg 143deg`,
-            `${hoverStart === '143' ? hoverColor : missing.dataset.color} 143deg 360deg`
-        ].join(',');
-    
-            pieChart.style.background = `conic-gradient(${gradient})`;
-        }
-    });
-    </script>
-    
-    <script>
-    function copyAccountNumber(element) {
-        // Copy text to clipboard
-        navigator.clipboard.writeText(element.textContent).then(() => {
-            // Add copied class for feedback
-            element.classList.add('copied');
-            
-            // Remove the class after animation
-            setTimeout(() => {
-                element.classList.remove('copied');
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
-    </script>
