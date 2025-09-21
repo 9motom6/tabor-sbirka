@@ -342,10 +342,10 @@ Vybavení tábořiště nám přinese více klidu a jistoty, a také základ pro
         <div class="financing-details">
             <ul>
                 <li class="total" data-color="#2c3e50" data-hover="#34495e">Celkové náklady<strong>600 000 Kč</strong></li>
-                <li class="own-funds" data-color="rgb(54, 162, 235)" data-hover="rgb(41, 128, 185)" data-segment="0,54">Naše vlastní prostředky<strong>100 000 Kč</strong></li>
+                <li class="own-funds" data-color="rgb(54, 162, 235)" data-hover="rgb(41, 128, 185)" data-segment="0,54">Naše vlastní prostředky<strong>180 000 Kč</strong></li>
                 <li class="grant" data-color="rgb(75, 192, 192)" data-hover="rgb(69, 179, 179)" data-segment="54,86">Dotace od Jihomoravského kraje<strong>143 000 Kč</strong></li>
-                <li class="donations" data-color="#f39c12" data-hover="#e67e22" data-segment="86,100">Vybraná částka<strong>54 000 Kč</strong></li>
-                <li class="missing" data-color="rgb(255, 99, 132)" data-hover="rgb(231, 76, 106)" data-segment="100,360">Chybějící částka<strong>303 000 Kč</strong></li>
+                <li class="donations" data-color="#f39c12" data-hover="#e67e22" data-segment="86,100">Dary<strong>153 000 Kč</strong></li>
+                <li class="missing" data-color="rgb(255, 99, 132)" data-hover="rgb(231, 76, 106)" data-segment="100,360">Chybějící částka<strong>124 000 Kč</strong></li>
             </ul>
         </div>
 
@@ -781,30 +781,13 @@ Vybavení tábořiště nám přinese více klidu a jistoty, a také základ pro
         height: 250px;
         border-radius: 50%;
         background: conic-gradient(
-            rgb(54, 162, 235) 0% 16.67%,
-            rgb(75, 192, 192) 16.67% 40.5%,
-            #f39c12 40.5% 49.5%,
-            rgb(255, 99, 132) 49.5% 100%
+            rgb(54, 162, 235) 0% 30%,
+            rgb(75, 192, 192) 30% 53.83%,
+            #f39c12 53.83% 79.33%,
+            rgb(255, 99, 132) 79.33% 100%
         );
         margin: 0 auto;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
     }
 </style>
-
-<script>
-    function copyAccountNumber(element) {
-        // Copy text to clipboard
-        navigator.clipboard.writeText(element.textContent).then(() => {
-            // Add copied class for feedback
-            element.classList.add('copied');
-            
-            // Remove the class after animation
-            setTimeout(() => {
-                element.classList.remove('copied');
-            }, 2000);
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    }
-    </script>
